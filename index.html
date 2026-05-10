@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cassia Grove</title>
+    <link rel="icon" type="image/svg+xml" href="assets/cassia-logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,39 +16,47 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <section class="hero-section">
-      <nav class="navbar navbar-expand-lg custom-navbar">
-        <div class="container">
-          <a class="navbar-brand" href="#">Cassia Grove</a>
+      <div class="nav-wrapper">
+        <nav class="navbar navbar-expand-lg custom-navbar">
+          <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <img
+                src="assets/cassia-logo.svg"
+                alt="Cassia Grove Logo"
+                class="navbar-image"
+              />
+            </a>
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div
-            class="collapse navbar-collapse justify-content-center"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav gap-4">
-              <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Rooms</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Amenities</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link book-btn" href="#">Book Now</a>
-              </li>
-            </ul>
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav gap-4">
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Rooms</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Amenities</a>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="btn explore-btn">Book Now</a>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
 
       <div class="container hero-content text-center">
         <div class="floating-cards">
