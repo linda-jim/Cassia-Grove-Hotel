@@ -62,19 +62,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   margin-bottom: 40px;
   width: 100%;
   flex-wrap: wrap;
 }
 
 .info-card {
-  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
   background: var(--glass);
   backdrop-filter: blur(15px);
-  border-radius: 20px;
-  flex: 0 1 auto;
+  border-radius: 15px;
   transition: transform 0.3s ease;
+}
+
+.info-card img {
+  width: 220px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-brown);
+  font-family: "Montserrat", sans-serif;
 }
 
 .info-card:hover {
