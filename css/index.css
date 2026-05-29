@@ -1,30 +1,22 @@
 body {
   background: #dbc595;
-  background: radial-gradient(
-    circle,
-    rgba(219, 197, 149, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-
   color: var(--dark);
-
-  /* Image Background */
-  /* background: url("../assets/images/river_boats.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  color: var(--white); */
 }
 
+/* SECTION-1 */
+
 .hero-section {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 20px;
   overflow: hidden;
   gap: 40px;
+  background: radial-gradient(
+    circle,
+    rgba(219, 197, 149, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .hero-content {
@@ -35,6 +27,7 @@ body {
   align-items: center;
   text-align: center;
   padding-top: 0;
+  margin-top: 80px;
 }
 
 .hero-content h1 {
@@ -77,11 +70,11 @@ body {
   background: var(--glass);
   backdrop-filter: blur(15px);
   border-radius: 15px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .info-card img {
-  width: 220px;
+  width: 280px;
   height: 170px;
   object-fit: cover;
   border-radius: 15px;
@@ -107,17 +100,223 @@ body {
   transform: rotate(8deg);
 }
 
+/* Experience Quiet Luxury Animation */
+.animated-text {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 15px;
+}
+
+.animated-text .word {
+  display: inline-block;
+  transform: translateY(40px);
+  opacity: 0;
+  animation: smoothRaiseUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes smoothRaiseUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  30% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* END - Experience Quiet Luxury Animation */
+
+/* Subtext Animation */
+.hero-content p,
+.hero-content .explore-btn {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUpEntrance 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-content p {
+  animation-delay: 0.2s;
+}
+
+.hero-content .explore-btn {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUpEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* END - Subtext Animation */
+
+/* Info Card Animation */
+.info-card {
+  opacity: 0;
+  animation: pureFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.info-card:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.info-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.info-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes pureFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* END - Info Card Animation */
+
 @media (max-width: 768px) {
+  nav {
+    width: 100% !important;
+  }
+
   .hero-content h1 {
     font-size: 2.8rem;
   }
 
   .rotate-left,
   .rotate-right {
-    transform: rotate(0deg);
+    transform: unset;
+  }
+
+  .info-card:hover {
+    transform: none !important;
+  }
+
+  .info-card img {
+    max-width: 100%;
   }
 
   .floating-cards {
+    flex-direction: column;
     gap: 10px;
   }
+
+  .pillars-section {
+    min-height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: stretch;
+  }
+
+  .pillars-section .container-fluid {
+    position: static;
+  }
+
+  .pillars-section .row.g-4 {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .pillars-section .pillar-block {
+    width: 100%;
+    min-height: auto;
+    padding: 40px 28px;
+    border-radius: 32px;
+  }
+}
+
+/* SECTION-2 */
+.pillars-section {
+  position: relative;
+  background-color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 0;
+}
+
+.container-fluid {
+  position: absolute;
+  bottom: 0;
+  margin-top: 0;
+}
+
+.section-tagline {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--primary-brown);
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--dark);
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+.pillar-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 35px 40px 35px;
+  height: auto;
+  min-height: 355px;
+
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+
+.pillar-tagline {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.pillar-content p {
+  font-size: 0.95rem;
+  color: var(--dark);
+  line-height: 1.7;
+  opacity: 0.8;
+  max-width: 320px;
+  margin: 0 auto 35px;
+}
+
+.pillar-wellness {
+  background-color: rgba(135, 156, 132, 0.15);
+}
+.pillar-wellness .pillar-tagline {
+  color: var(--primary-brown);
+}
+
+.pillar-work {
+  background-color: rgba(219, 197, 149, 0.2);
+}
+.pillar-work .pillar-tagline {
+  color: var(--primary-brown);
+}
+
+.pillar-leisure {
+  background-color: rgba(64, 63, 63, 0.05);
+}
+.pillar-leisure .pillar-tagline {
+  color: var(--primary-brown);
 }

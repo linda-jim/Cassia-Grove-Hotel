@@ -19,45 +19,48 @@
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <section class="hero-section">
-      <div class="nav-wrapper">
-        <nav class="navbar navbar-expand-lg custom-navbar">
-          <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-              <img
-                src="assets/cassia-logo.svg"
-                alt="Cassia Grove Logo"
-                class="navbar-image"
-              />
-            </a>
-
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div
-              class="collapse navbar-collapse justify-content-center"
-              id="navbarNav"
-            >
-              <ul class="navbar-nav gap-4">
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Rooms</a></li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Amenities</a>
-                </li>
-              </ul>
-            </div>
-
-            <a href="#" class="btn explore-btn">Book Now</a>
+    <div class="nav-wrapper">
+      <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img
+              src="assets/cassia-logo.svg"
+              alt="Cassia Grove Logo"
+              class="navbar-image"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-4">
+              <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Rooms</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Amenities</a>
+              </li>
+            </ul>
+            <a href="#" class="btn explore-btn d-lg-none mt-3">Book Now</a>
           </div>
-        </nav>
-      </div>
 
+          <a href="#" class="btn explore-btn d-none d-lg-inline-block"
+            >Book Now</a
+          >
+        </div>
+      </nav>
+    </div>
+    <section class="hero-section">
       <div class="container hero-content text-center">
         <div class="floating-cards">
           <div class="info-card rotate-left">
@@ -74,17 +77,87 @@
           </div>
         </div>
 
-        <h1>Experience Quiet Luxury</h1>
+        <h1 class="animated-text">Cassia Grove Hotel</h1>
         <p>
-          A modern boutique stay just minutes from Cochin Airport, designed for
-          comfort, calm, and effortless travel.
+          A cozy stay just minutes from Cochin Airport, with runway views and
+          spacious suites at local rates
         </p>
 
         <a href="#" class="btn explore-btn">Explore Rooms</a>
       </div>
     </section>
 
+    <section class="pillars-section">
+      <div class="container-fluid px-lg-5">
+        <div class="row mb-5 text-center justify-content-center">
+          <div class="col-lg-7">
+            <h1 class="section-title my-3">
+              Elevated Comforts, Unmatched Value
+            </h1>
+            <p class="section-subtitle">
+              Enjoy premium 3-star hospitality and modern amenities thoughtfully
+              curated for transit, business, and family leisure; all paired with
+              competitive local tariffs.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center align-items-end">
+          <div class="col-md-6 col-lg-4">
+            <div class="pillar-block pillar-wellness text-center">
+              <div class="pillar-header">
+                <h2>Unwind</h2>
+                <span class="pillar-tagline"
+                  >A refreshing break for everyone</span
+                >
+              </div>
+              <div class="pillar-content">
+                <p>
+                  Unwind in our swimming pool or watch your little ones splash
+                  safely in the separate kids' area.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="pillar-block pillar-work text-center">
+              <div class="pillar-header">
+                <h2>Transit</h2>
+                <span class="pillar-tagline">We take care of the details</span>
+              </div>
+              <div class="pillar-content">
+                <p>
+                  We know airport travel is exhausting, so our fast, quiet
+                  passenger lifts make getting your luggage to your room
+                  completely effortless.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="pillar-block pillar-leisure text-center">
+              <div class="pillar-header">
+                <h2>3 Star Comfort</h2>
+                <span class="pillar-tagline"
+                  >Premium convenience, local rates</span
+                >
+              </div>
+              <div class="pillar-content">
+                <p>
+                  We believe in honest pricing, so we match our tariffs with
+                  standard local rates instead of inflating them just because we
+                  are close to the terminal
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
